@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oakwood Video Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://vjs.zencdn.net/8.22.0/video-js.css" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .video-js {
+      width: 90%;
+      max-width: 900px;
+      font-size: 14px;
+    }
+    .vjs-default-skin .vjs-big-play-button {
+      background-color: #0f1819;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 2em;
+      line-height: 60px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+    }
+    .video-js .vjs-control-bar {
+      background-color: #0f1819;
+      justify-content: center;
+    }
+    .video-js .vjs-current-time,
+    .video-js .vjs-duration,
+    .video-js .vjs-time-divider,
+    .video-js .vjs-volume-panel,
+    .video-js .vjs-fullscreen-control,
+    .video-js .vjs-progress-control,
+    .video-js .vjs-remaining-time,
+    .video-js .vjs-playback-rate,
+    .video-js .vjs-chapters-button,
+    .video-js .vjs-captions-button {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <video
+    id="custom-video"
+    class="video-js vjs-default-skin"
+    controls
+    preload="auto"
+    poster="https://video.oakwood.marketing/oakwood/videoframe_4814.png"
+    data-setup="{}">
+    <source src="https://video.oakwood.marketing/oakwood/EvanTestimonialVideo.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript and consider upgrading to a
+      browser that <a href="https://videojs.com/html5-video-support/">supports HTML5 video</a>.
+    </p>
+  </video>
+
+  <script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
+  <script>
+    videojs('custom-video');
+  </script>
+
+</body>
+</html>

@@ -51,10 +51,16 @@
     </p>
   </video>
 
-  <script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
-  <script>
-    videojs('custom-video');
-  </script>
+<script>
+  window.addEventListener('load', function () {
+    if (typeof videojs !== 'undefined') {
+      videojs('custom-video');
+    } else {
+      console.error('Video.js failed to load');
+    }
+  });
+</script>
+
 
 </body>
 </html>
